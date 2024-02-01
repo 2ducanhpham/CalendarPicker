@@ -181,6 +181,15 @@ export const Utils = {
     }
     return weekdays;
   },
+  getWeekdays2: function (firstDay = 0, weekdaysLocalize) {
+    let from = firstDay;
+    const weekdays = [];
+    for (let i = 0; i <weekdaysLocalize.length; i++) {
+      weekdays.push(weekdaysLocalize[from]);
+      from = from >= weekdaysLocalize.length - 1 ? 0 : from + 1;
+    }
+    return weekdays;
+  },
   getISOWeekdaysOrder: function (firstDay = 0) {
     let from = firstDay === 0 ? 7 : firstDay;
     const order = [];

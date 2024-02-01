@@ -23,6 +23,8 @@ export default function Weekdays(props) {
   let wd = weekdays;
   if (!wd) {
     wd = firstDay ? Utils.getWeekdays(firstDay) : Utils.WEEKDAYS; // English Week days Array
+  } else {
+    wd = firstDay ? Utils.getWeekdays2(firstDay, weekdays) : weekdays; // localize
   }
 
   return (
